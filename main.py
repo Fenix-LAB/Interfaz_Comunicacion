@@ -20,21 +20,22 @@ class MyApp(QtWidgets.QMainWindow, Ui_COM_S):
         ######################################
         ######################################
 
-
+        ## configuramos la comunicacion
         self.serial.setBaudRate(9600)
         self.serial.setPortName('COM4')
 
+
 # Metodos:
     def Conectar(self):
-        self.serial.open(QIODevice.ReadWrite)
+        self.serial.open(QIODevice.ReadWrite)  ## Abre el puerto
 
     def Desconectar(self):
         self.serial.close()
 
     def read_data(self):
-        rx = self.serial.readLine()
-        datos = str(rx, 'utf-8')
-        self.LABEL_TEXT.setText(datos)
+        rx = self.serial.readLine()  ## Leyendo el puerto
+        datos = str(rx, 'utf-8') ## Convertimos de byte a str
+        self.LABEL_TEXT.setText(datos)  ## Mandando al Label
 
 
 
