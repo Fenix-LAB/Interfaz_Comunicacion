@@ -14,9 +14,27 @@ class MyApp(QtWidgets.QMainWindow, Ui_COM_S):
         self.BTN_CONECTAR.clicked.connect(self.Conectar)
         self.BTN_DESCONECTAR.clicked.connect(self.Desconectar)
 
+        ######################################
+        ########## EVENTO ESPECIAL ###########
+        self.serial.readyRead.connect(self.read_data)
+        ######################################
+        ######################################
+
+
         self.serial.setBaudRate(9600)
         self.serial.setPortName('COM4')
 
+# Metodos:
+    def Conectar(self):
+        self.serial.open(QIODevice.ReadWrite)
+
+    def Desconectar(self):
+        self.serial.close()
+
+    def read_data(self):
+        rx = self.serial.readLine()
+        datos = str(rx, 'utf-8')
+        self.LABEL_TEXT.setText(datos)
 
 
 
