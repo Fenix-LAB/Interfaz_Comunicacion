@@ -35,7 +35,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_COM_S):
     def read_data(self):
         rx = self.serial.readLine()  ## Leyendo el puerto
         datos = str(rx, 'utf-8') ## Convertimos de byte a str
-        self.LABEL_TEXT.setText(datos)  ## Mandando al Label
+        ## self.LABEL_TEXT.setText(datos)  ## Mandando al Label
 
 
 
