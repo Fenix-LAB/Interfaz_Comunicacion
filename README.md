@@ -13,6 +13,7 @@ Diseñar la interfaz en Qt Designer
 Instalar el modulo de PyQt5 desde la terminal
 ```bash
 pip install PyQt5
+pip install pyqtgraph
 ```
 
 #### Paso 4:
