@@ -58,6 +58,9 @@ margin:-12px;
 border-radius:14px;
 ```
 
+COLORS
+https://htmlcolorcodes.com/es/
+
 #### Paso 3:
 Instalar el modulo de PyQt5 desde la terminal
 ```bash
