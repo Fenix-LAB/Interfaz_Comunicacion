@@ -9,6 +9,55 @@ Diseñar la interfaz en Qt Designer
 - Definir los IDs de los widgets
 - Guardamos el diseño dentro de nuestro proyecto
 
+###### STYLE SHEET (QT DESIGNER)
+
+```c++
+QFrame{
+}
+
+QPushButton{
+}
+
+QPushButton:hover{
+}
+
+QLabel{
+}
+
+QLineEdit{
+}
+
+QTableWidget{
+}
+
+QSlider::handle:horizontal{
+}
+
+QSlider::add-page:horizontal{
+}
+
+QSlider::groove:horizontal{
+}
+```
+```c++
+background-color: rgb(130,187,62);
+border-top-left-radius:20px;
+border-bottom-left-radius:20px;
+border-top-right-radius:5px;
+border-bottom-right-radius:5px;
+color:rgb(0,0,0);
+font: 77 14pt "Arial";
+gridline-color:rgb(130,187,62);
+border: 1px solid rgb(0,0,0);
+font-size:12pt;
+width:28px;
+height:28px;
+left:11px;
+right:11px;
+margin:-12px;
+border-radius:14px;
+```
+
 #### Paso 3:
 Instalar el modulo de PyQt5 desde la terminal
 ```bash
